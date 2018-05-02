@@ -3,6 +3,10 @@ cloudstack CHANGELOG
 
 This file is used to list changes made in each version of the co-cloudstack cookbook.
 
+4.1.3
+-----
+- vilisseranen - DSL-based custom resources and providers no longer get module constants (Chef 13+)
+
 4.1.2
 -----
 - khos2ow - add default metadata expire to cloudstack repo

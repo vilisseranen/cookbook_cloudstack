@@ -75,7 +75,7 @@ end
 
 
 def load_current_resource
-  @current_resource = Chef::Resource::CloudstackApiKeys.new(@new_resource.name)
+  @current_resource = Chef::Resource.resource_for_node(:cloudstack_api_keys, node).new(@new_resource.name)
   @current_resource.username(@new_resource.name)
   @current_resource.password(@new_resource.password)
   @current_resource.url(@new_resource.url)

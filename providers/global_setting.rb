@@ -44,7 +44,7 @@ end
 
 def load_current_resource
   require 'cloudstack_ruby_client'
-  @current_resource = Chef::Resource::CloudstackGlobalSetting.new(@new_resource.name)
+  @current_resource = Chef::Resource.resource_for_node(:cloudstack_global_setting, node).new(@new_resource.name)
   @current_resource.name(@new_resource.name)
   if $admin_apikey.nil? 
     @current_resource.admin_apikey(@new_resource.admin_apikey)

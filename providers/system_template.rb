@@ -39,7 +39,7 @@ end
 
 
 def load_current_resource
-  @current_resource = Chef::Resource::CloudstackSystemTemplate.new(@new_resource.name)
+  @current_resource = Chef::Resource.resource_for_node(:cloudstack_system_template, node).new(@new_resource.name)
   @current_resource.name(@new_resource.name)
   @current_resource.url(@new_resource.url)  
   @current_resource.hypervisor(@new_resource.hypervisor)

@@ -44,7 +44,7 @@
 # end
 
 # def load_current_resource
-#   @current_resource = Chef::Resource::CloudstackSetupDatabase.new(@new_resource.name)
+#   @current_resource = Chef::Resource.resource_for_node(:cloudstack_setup_database, node).new(@new_resource.name)
 #   @current_resource.name(@new_resource.name)
 #   @current_resource.tomcat7(@new_resource.tomcat7)
 #   @current_resource.https(@new_resource.https)
